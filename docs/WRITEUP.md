@@ -1,12 +1,16 @@
 <!-- boring boilerplate -->
 
+# Briefing
+
+In this "*document*" (markdown because im too different), *low level* yet "*easy to understand*" information about the CPU can be found. The main focus of this document is more about ***how it works*** than *what it is*. Because come on like I know that you know what a CPU is. But I'm sure you don't know how the CPU makes that 010101011110110100101010011 make a rectangle appear on your screen (though wont be talking about that, sucks to suck i guess).
+
 # What is a CPU?
 
-The *CPU* (or Central Processing Unit) is the brain of the computer and handles almost everything. The things you see on your monitor, the audio your computer plays, registering your keyboard keys and whatnot.
+The *CPU* (or *Central Processing Unit*) is the *brain of the computer* and handles **almost everything**. The things you see on your monitor, the audio your computer plays, registering your keyboard keys and whatnot.
 
 # History
 
-It's origin came form the *ENIAC*, the first computer ever created. It was made in 1945 by John Mauchly and J. Presper Eckert and was able to do basic arithmetic operations but more importantly calculate artillery firing tables. It was hard to use as it required you to manually wire each instruction.
+It's origin came form the *ENIAC*, the first computer ever created. It was made in 1945 by *John Mauchly* and *J. Presper Eckert* and was able to do basic arithmetic operations but more importantly calculate artillery firing tables (which explains its creation date, though it finished construction after the war). It was hard to use as it required you to manually wire each instruction.
 
 <!-- yes this is staying -->
 i couldnt be bothered to add more history its like literally the same afterwards.
@@ -14,7 +18,7 @@ if i do start talking about more stuff it will get super complicated like ever h
 
 # How does a CPU work?
 
-The CPU runs instructions of a program. Which it seperates into two main components, being:
+The CPU runs instructions of a program. Which it separates into two main components, being:
 
 * CU (Control Unit)
 * ALU (Arithmetic and Logical Unit)
@@ -35,7 +39,7 @@ Or take bitmap images, which stores 4 bytes for each pixel measuring its red, gr
 
 #### Oh wow let me guess the programs are in binary too
 
-This also implies that ALL applications you use are also in binary. Since the CPU won't understand anything when you say "hack europe chat system and make my opsec god level", you have to give it instructions that it CAN understand. And all the applications you use are just a giant chain of these instructions.
+This also implies that ALL applications you use are also in binary. Since the CPU won't understand anything when you say "*hack europe chat system and make my opsec god level*", you have to give it instructions that it CAN understand. And all the applications you use are just a giant chain of these instructions.
 
 ##### Compilers
 
@@ -103,6 +107,28 @@ Pretty cool huh? You can assume that every other operation has their own logics 
 
 CU, unlike the ALU is more interesting because it handles fetching data from memory, decoding and executing instructions. Being a manager of sorts, even sets up registers and what not for the ALU.
 
+"Memory? Registers?? Instructions??? What even are you blabbering about?". Okay bucko.
+
+## Memory basics
+
+Say you want to remember a number she gave you. So it's loaded into your short term memory and you're all fluttered and now it gets into your long term memory. After a while you decide to call her. "What's her number again?", and after a while her number gets loaded from the long term memory and into your short term memory. And with the number, you make your other move.
+
+What..? You're a human being? I thought you were a CPU.
+
+Yeah this is how a computers memory actually works, everything stored in your hard drive is technically long term memory (i.e slower and long lasting) and the ram sticks the AI is feeding on is its short term memory (i.e fast and always circulating). And we're focusing on the short term memory.
+
+It consists of raw data and instructions by the same applications you're running, yes they load the executable into ram first.
+
+a girl gave you her number? cant remember that happening
+
+<!-- TODO: get into more details -->
+
+## Instructions
+
+<!-- TODO: get into more details -->
+
+### Instructing
+
 <!-- TODO: get into more details -->
 
 # Source's used
@@ -110,6 +136,7 @@ CU, unlike the ALU is more interesting because it handles fetching data from mem
 * [Wikipedia page for Central Processing Unit](https://en.wikipedia.org/wiki/Central_processing_unit)
 * [Wikipedia page for ENIAC](https://en.wikipedia.org/wiki/ENIAC)
 * [CPU article by freeCodeCamp](https://www.freecodecamp.org/news/how-does-a-cpu-work/)
+* [Where Does The CPU Start Executing Code?](https://www.youtube.com/watch?v=WLixwlcVm5Y)
 
 <!-- im noticing that i dont really know much about cpus -->
 <!-- dang i love finding out more of the things i like -->
