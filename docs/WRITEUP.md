@@ -12,7 +12,7 @@ The *CPU* (or *Central Processing Unit*) is the *brain of the computer* and hand
 
 # History
 
-It's origin came form the *ENIAC*, the first computer ever created. It was made in 1945 by *John Mauchly* and *J. Presper Eckert* and was able to do basic arithmetic operations but more importantly calculate artillery firing tables (which explains its creation date, though it finished construction after the war). It was hard to use as it required you to manually wire each instruction.
+It's origin came from the *ENIAC*, the first computer ever created. It was made in 1945 by *John Mauchly* and *J. Presper Eckert* and was able to do basic arithmetic operations but more importantly calculate artillery firing tables (which explains its creation date, though it finished construction after the war). It was hard to use as it required you to manually wire each instruction.
 
 <!-- yes this is staying -->
 i couldnt be bothered to add more history its like literally the same afterwards.
@@ -172,7 +172,19 @@ There are the main two archetypes (though they're just that because its used by 
 
 #### Instructing
 
-<!-- TODO: get into more details -->
+FINALLY. After all the theory, we have come to THE core loop of the CPU:
+
+1. Fetch: Look at the address of Program Counter and stores it somewhere, then increments the Program Counter.
+2. Decode: The CU looks at the instruction and finds its opcode, which then figures out what circuits and steps are needed.
+3. Execute: It now calculates the operation using ALU or moves memory around. After which it repeats back to the Fetch step.
+
+It's really simple for saying out loud. The CPU does this so insanely fast that you wouldn't actually notice that it takes steps, rather than instantly responding.
+
+# Conclusion
+
+Now that we learnt what a CPU is, might wanna try coding on one huh :eyes:. No? Then like, what are you gonna do with it?
+
+Look maybe, the real central processing unit was the friends we made along the way. Maybe it wasn't about learning how a CPU works but rather blah blah i just want my grade goodbye and have a nice day!
 
 # Source's used
 
