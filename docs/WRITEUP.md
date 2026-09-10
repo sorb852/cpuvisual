@@ -75,14 +75,14 @@ It works because the carry out should only be 1 IF the two bits are also 1, resu
 
 Its truth table looks as such:
 
-| X | Y | Co | Bo |
-| - | - | -- | -- |
-| 0 | 0 | 0  | 0  |
-| 1 | 0 | 0  | 1  |
-| 0 | 1 | 0  | 1  |
-| 1 | 1 | 1  | 0  |
+| X | Y | Co | Bo | Diagram                                             |
+| - | - | -- | -- | --------------------------------------------------- |
+| 0 | 0 | 0  | 0  | <img src="half_adder_00.png" height="200" alt="00"> |
+| 1 | 0 | 0  | 1  | <img src="half_adder_01.png" height="200" alt="01"> |
+| 0 | 1 | 0  | 1  | <img src="half_adder_10.png" height="200" alt="01"> |
+| 1 | 1 | 1  | 0  | <img src="half_adder_11.png" height="200" alt="10"> |
 
-<img src="half_adder.gif" alt="Half adder states" width="170">
+<!-- <img src="half_adder.gif" alt="Half adder states" width="170"> -->
 
 The Full Adder expands on this, taking another input. A carry IN. So this time it takes X, Y and carry in and outputs bit out and carry out. And is wired as such:
 
@@ -90,16 +90,16 @@ The funny thing is, it just adds another half adder and ORs the output of both c
 
 Here is the truth table for reference:
 
-| X | Y | Ci | Co | Bo |
-| - | - | -- | -- | -- |
-| 0 | 0 | 0  | 0  | 0  |
-| 1 | 0 | 0  | 0  | 1  |
-| 0 | 1 | 0  | 0  | 1  |
-| 0 | 0 | 1  | 0  | 1  |
-| 1 | 1 | 0  | 1  | 0  |
-| 1 | 0 | 1  | 1  | 0  |
-| 0 | 1 | 1  | 1  | 0  |
-| 1 | 1 | 1  | 1  | 1  |
+| X | Y | Ci | Co | Bo | Diagram                                              |
+| - | - | -- | -- | -- | ---------------------------------------------------- |
+| 0 | 0 | 0  | 0  | 0  | <img src="full_adder_000.png" height="200" alt="00"> |
+| 1 | 0 | 0  | 0  | 1  | <img src="full_adder_100.png" height="200" alt="01"> |
+| 0 | 1 | 0  | 0  | 1  | <img src="full_adder_010.png" height="200" alt="01"> |
+| 0 | 0 | 1  | 0  | 1  | <img src="full_adder_001.png" height="200" alt="10"> |
+| 1 | 1 | 0  | 1  | 0  | <img src="full_adder_110.png" height="200" alt="10"> |
+| 1 | 0 | 1  | 1  | 0  | <img src="full_adder_101.png" height="200" alt="10"> |
+| 0 | 1 | 1  | 1  | 0  | <img src="full_adder_011.png" height="200" alt="10"> |
+| 1 | 1 | 1  | 1  | 1  | <img src="full_adder_111.png" height="200" alt="10"> |
 
 Pretty cool huh? You can assume that every other operation has their own logics too.
 
