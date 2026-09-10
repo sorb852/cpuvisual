@@ -191,9 +191,12 @@ Look maybe, the real central processing unit was the friends we made along the w
 * [Wikipedia page for Central Processing Unit](https://en.wikipedia.org/wiki/Central_processing_unit)
 * [Wikipedia page for ENIAC](https://en.wikipedia.org/wiki/ENIAC)
 * [Wikipedia page for ISA](https://en.wikipedia.org/wiki/Instruction_set_architecture)
+* [Wikipedia page for x86-64](https://en.wikipedia.org/wiki/X86-64)
+* [Wikipedia page for ARM](https://en.wikipedia.org/wiki/ARM_architecture_family)
 * [CPU article by freeCodeCamp](https://www.freecodecamp.org/news/how-does-a-cpu-work/)
 * [Where Does The CPU Start Executing Code?](https://www.youtube.com/watch?v=WLixwlcVm5Y)
 * i dont remember but that one redstone circuit video made by that minecraft youtuber (my first intro to whatever this is btw)
+* [Anatomy of a CPU](https://www.techspot.com/article/2000-anatomy-cpu/)
 
 <!-- im noticing that i dont really know much about cpus -->
 <!-- dang i love finding out more of the things i like -->
