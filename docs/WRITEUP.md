@@ -82,9 +82,9 @@ Its truth table looks as such:
 | 0 | 1 | 0  | 1  |
 | 1 | 1 | 1  | 0  |
 
-The Full Adder expands on this, taking another input. A carry IN. So this time it takes x, y and carry in and outputs bit out and carry out. And is wired as such:
+![Half adder states](half_adder.gif)
 
-<!-- insert another cool diagram -->
+The Full Adder expands on this, taking another input. A carry IN. So this time it takes x, y and carry in and outputs bit out and carry out. And is wired as such:
 
 The funny thing is, it just adds another half adder and ORs the output of both carry outs from the half adders. Besides two halves should create a whole.
 
@@ -117,9 +117,15 @@ What..? You're a human being? I thought you were a CPU.
 
 Yeah this is how a computers memory actually works, everything stored in your hard drive is technically long term memory (i.e slower and long lasting) and the ram sticks the AI is feeding on is its short term memory (i.e fast and always circulating). And we're focusing on the short term memory.
 
+a girl gave you her number? cant remember that happening
+
 It consists of raw data and instructions by the same applications you're running, yes they load the executable into ram first.
 
-a girl gave you her number? cant remember that happening
+### Registers
+
+The CPU keeps track of variables such as the registers which are super fast memory type built directly into the CPU.
+
+There are many types of registers such as Program Counter which points to the current instruction that's about to be executed=
 
 <!-- TODO: get into more details -->
 
