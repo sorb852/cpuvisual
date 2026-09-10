@@ -1,10 +1,12 @@
-<!-- boring boilerplate -->
+<!-- TODO: add cooler text style -->
 
 # Briefing
 
 In this "*document*" (markdown because im too different), *low level* yet "*easy to understand*" information about the CPU can be found. The main focus of this document is more about ***how it works*** than *what it is*. Because come on like I know that you know what a CPU is. But I'm sure you don't know how the CPU makes that 010101011110110100101010011 make a rectangle appear on your screen (though wont be talking about that, sucks to suck i guess).
 
 # What is a CPU?
+
+Obviously we need to start from the bottom up. Though this would be short.
 
 The *CPU* (or *Central Processing Unit*) is the *brain of the computer* and handles **almost everything**. The things you see on your monitor, the audio your computer plays, registering your keyboard keys and whatnot.
 
@@ -22,6 +24,8 @@ The CPU runs instructions of a program. Which it separates into two main compone
 
 * CU (Control Unit)
 * ALU (Arithmetic and Logical Unit)
+
+The CPU also has multiple cores which is basically running CPUs inside a larger CPU. It can be used to run multiple instructions at once but since they're basically just CPUs, I wont be getting over into multi core. And it's mostly managed by the operating system.
 
 ## Talking binary
 
@@ -51,7 +55,7 @@ And voila, software.
 
 ## Arithmetic and Logical Unit
 
-ALU performs arithmetic (duh) and logical (DUH) operations given through the registers and then stored there.
+ALU performs arithmetic (duh) and logical (DUH) operations given through the registers and then stored there. It is an electrical circuit meaning input in and input out without having to code it. Like it has nothing that a CPU does, it's just a circuit. If they weren't printed into the CPU, you can probably rip it out and use it sending pulses.
 
 It performs these actions via Logic Gates, you know, the ones you learnt from 10th grade physics? Since computers can't do math (let alone comprehend decimal numbers) they have to rely on pure logic for arithmetic operations.
 
@@ -82,8 +86,6 @@ Its truth table looks as such:
 | 0 | 1 | 0  | 1  | <img src="half_adder_10.png" height="200" alt="01"> |
 | 1 | 1 | 1  | 0  | <img src="half_adder_11.png" height="200" alt="10"> |
 
-<!-- <img src="half_adder.gif" alt="Half adder states" width="170"> -->
-
 The Full Adder expands on this, taking another input. A carry IN. So this time it takes X, Y and carry in and outputs bit out and carry out. And is wired as such:
 
 The funny thing is, it just adds another half adder and ORs the output of both carry outs from the half adders. Besides two halves should create a whole.
@@ -109,7 +111,7 @@ CU, unlike the ALU is more interesting because it handles fetching data from mem
 
 "Memory? Registers?? Instructions??? What even are you blabbering about?". Okay bucko.
 
-## Memory basics
+### Memory basics
 
 Say you want to remember a number she gave you. So it's loaded into your short term memory and you're all fluttered and now it gets into your long term memory. After a while you decide to call her. "What's her number again?", and after a while her number gets loaded from the long term memory and into your short term memory. And with the number, you make your other move.
 
@@ -121,19 +123,54 @@ a girl gave you her number? cant remember that happening
 
 It consists of raw data and instructions by the same applications you're running, yes they load the executable into ram first.
 
-### Registers
+#### Registers
 
-The CPU keeps track of variables such as the registers which are super fast memory type built directly into the CPU.
+The CPU keeps track of variables such as the registers which are super fast memory type built directly into the CPU. Which is why they're fast. They are usually 64 bits and can ranges a lot in usage.
 
-There are many types of registers such as Program Counter which points to the current instruction that's about to be executed=
+There are many types of registers such as Program Counter which points to the current instruction that's about to be executed, the Stack Pointer which points to the stack (which you don't need to worry now, too complicated for the scope) or the general purpose registers which can be used by the user space code. There's a ton more but that's out of our scope.
 
-<!-- TODO: get into more details -->
+<!-- TODO: wtf is that it? like yeah thats the idea of a register but this feels too little. but like its just a faster ram and i already explained ram -->
 
-## Instructions
+### Instructions
 
-<!-- TODO: get into more details -->
+So now that we got with the boiler plate, we can get to the BIG guns.
 
-### Instructing
+Let's take a look at how a CPU runs executables.
+
+Instructions are a set of bits defined by an Instruction Set Architecture (*ISA*) of the CPU. The most common ISA is the *x86-64* by the AMD and is most commonly used with Windows and everything really. The *ARM(64)* ISA made by ARM, used by Apple for their silicon chips. This sounds complicated and it probably is. It makes everything a mess because now people need to write more code for their software to make it work on other CPUs.
+
+#### Anatomy of an instruction
+
+The main anatomy of an instruction goes as such:
+
+1. Opcode: The instruction to be performed. These can be some bits that map to a different instruction. Like imagine a 2 bit opcode, it would be something like 00 - ADD, 01 - JUMP, 10 - MOV, 11 - CALL (not real life example, you probably won't ever see a 2 bit opcode).
+2. Operand: The well operand. It can be registers, literal values, memory addresses.
+
+The types of instructions can be split up into:
+
+* Data handling: Setting register and memory value, copy, read or write to hardware devices.
+* Arithmetic and logical operations: you can not guess what these do. Though it actually doesn't support operations like square root, exponentiation, modulo and such. It only does the 4 simple operations (including floating point numbers, basically non integer numbers) and logical operations.
+* Control flow operations: Skipping instructions under a condition, jump to another section of the binary, branch and come back to the current location, repeat an instruction and etc.
+* Coprocessor instructions: Interact with the other circuitry made to offload the CPU. Lowkey I don't think I care enough for them to have a section.
+
+There are also more elaborate instructions implement from different ISA that handle different stuff. Such as arithmetic on BCD strings, complicated math operations (square root, trig functions, logarithms etc) and more.
+
+<!-- im lowkey copying one to one from the wikipedia page -->
+
+##### Instruction Encoding
+
+Man it would be so frustrating if there were other ways to encode instructions. Though I'm just really mad right now, I hope that has nothing to do with multiple ways to encode instructions!
+
+Okay yeah there's a lot of ways a CPU can decode your instruction meaning there are many ways to encode it. As expected the ARM and x86-64 CPUs have different encoding methods.
+
+Though traditionally, instructions had an opcode and zero and more operands for the opcode. Some times the width of the instruction is fixed, sometimes not, sometimes super large (you could say it's a Very Long Instruction Word) and hell rarely they don't have opcodes too?? Though if we're getting that far, might as well call them exotic.
+
+There are the main two archetypes (though they're just that because its used by the two most popular ISA).
+
+* Complex Instruction Set Computer (CISC): Used by the x86-64, it has an instruction size of 1 to 15 bytes, which makes it really hard to decode but gaining lower binary sizes in exchange.
+* Reduced Instruction Set Computer (RISC): Used by ARM, it favors more uniform instruction having the opposite pros and cons of the CISC.
+
+#### Instructing
 
 <!-- TODO: get into more details -->
 
@@ -141,8 +178,10 @@ There are many types of registers such as Program Counter which points to the cu
 
 * [Wikipedia page for Central Processing Unit](https://en.wikipedia.org/wiki/Central_processing_unit)
 * [Wikipedia page for ENIAC](https://en.wikipedia.org/wiki/ENIAC)
+* [Wikipedia page for ISA](https://en.wikipedia.org/wiki/Instruction_set_architecture)
 * [CPU article by freeCodeCamp](https://www.freecodecamp.org/news/how-does-a-cpu-work/)
 * [Where Does The CPU Start Executing Code?](https://www.youtube.com/watch?v=WLixwlcVm5Y)
+* i dont remember but that one redstone circuit video made by that minecraft youtuber (my first intro to whatever this is btw)
 
 <!-- im noticing that i dont really know much about cpus -->
 <!-- dang i love finding out more of the things i like -->
