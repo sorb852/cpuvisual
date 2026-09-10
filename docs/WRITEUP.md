@@ -71,26 +71,26 @@ The half adders get two bits as input and outputs a bit and a carry out. It is w
 
 <!-- insert some cool ass logic circuit -->
 
-It works because the carry out should only be 1 IF the two bits are also 1, resulting x & y. Where as the output bit only becomes 1 IF either one of the x or y was also one. But IF we use AND and OR, we get an issue when both x and y are 1. Which makes the carry 1 and the output bit 1 (which is obviously wrong because its the same as saying 1 + 1 = 3). Which means we have to exclude the scenario of bit out being 1 when both x and y are 1, sounds kinda like XOR to me. Resulting in a beautiful circuit of PURE logic.
+It works because the carry out should only be 1 IF the two bits are also 1, resulting X & Y. Where as the output bit only becomes 1 IF either one of the X or Y was also one. But IF we use AND and OR, we get an issue when both X and Y are 1. Which makes the carry 1 and the output bit 1 (which is obviously wrong because its the same as saying 1 + 1 = 3). Which means we have to exclude the scenario of bit out being 1 when both X and Y are 1, sounds kinda like XOR to me. Resulting in a beautiful circuit of PURE logic.
 
 Its truth table looks as such:
 
-| x | y | Co | Bo |
+| X | Y | Co | Bo |
 | - | - | -- | -- |
 | 0 | 0 | 0  | 0  |
 | 1 | 0 | 0  | 1  |
 | 0 | 1 | 0  | 1  |
 | 1 | 1 | 1  | 0  |
 
-![Half adder states](half_adder.gif)
+<img src="half_adder.gif" alt="Half adder states" width="170">
 
-The Full Adder expands on this, taking another input. A carry IN. So this time it takes x, y and carry in and outputs bit out and carry out. And is wired as such:
+The Full Adder expands on this, taking another input. A carry IN. So this time it takes X, Y and carry in and outputs bit out and carry out. And is wired as such:
 
 The funny thing is, it just adds another half adder and ORs the output of both carry outs from the half adders. Besides two halves should create a whole.
 
 Here is the truth table for reference:
 
-| x | y | Ci | Co | Bo |
+| X | Y | Ci | Co | Bo |
 | - | - | -- | -- | -- |
 | 0 | 0 | 0  | 0  | 0  |
 | 1 | 0 | 0  | 0  | 1  |
