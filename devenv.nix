@@ -4,8 +4,8 @@
   packages = [
     pkgs.eslint
     pkgs.prettier
-    pkgs.svelte-check
-    pkgs.tailwindcss
+    # pkgs.svelte-check
+    # pkgs.tailwindcss
   ];
 
   languages = {

@@ -1,0 +1,9 @@
+/home/sorb852/files/school/cpuvisual/.devenv/bootstrap/bootstrapLib.nix
+/home/sorb852/files/school/cpuvisual/.devenv/bootstrap/default.nix
+/home/sorb852/files/school/cpuvisual/.devenv/bootstrap/resolve-lock.nix
+/home/sorb852/files/school/cpuvisual/devenv.local.nix
+/home/sorb852/files/school/cpuvisual/devenv.lock
+/home/sorb852/files/school/cpuvisual/devenv.nix
+/home/sorb852/files/school/cpuvisual/devenv.yaml
+/home/sorb852/.config/nixpkgs/overlays
+/home/sorb852/.config/nixpkgs/overlays.nix
