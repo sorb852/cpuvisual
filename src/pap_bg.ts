@@ -11,8 +11,8 @@ function draw_cross(x: number, y: number, width: number, height: number, color: 
 }
 
 ctx.clearRect(0, 0, canvas.width, canvas.height)
-ctx.fillStyle = "black"
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// ctx.fillStyle = "black"
+// ctx.fillRect(0, 0, canvas.width, canvas.height)
 
 const padding = 60;
 
@@ -31,11 +31,19 @@ for (let y = 0; y < y_count; y++) {
   }
 }
 
-// for (let y = padding; y <= canvas.height - 2 * padding; y += (canvas.height - 2 * padding) / y_count) {
-//   draw_cross(30, y, 20, 5, "#d320d2")
-// }
 
-// draw_cross(30, 30, 20, 5, "#d320d2")
-// draw_cross(60, 30, 20, 5, "#faf1fa")
 
-export default canvas
+const export_button = document.createElement("button")!;
+export_button.innerHTML = "export"
+export_button.onclick = () => {
+  const dataURL = canvas.toDataURL("image/png", 2);
+  const link = document.createElement('a');
+  link.download = "pap_bg.png";
+  link.href = dataURL;
+  link.click();
+}
+
+const wrapper_div = document.createElement("div");
+wrapper_div.appendChild(canvas);
+wrapper_div.appendChild(export_button);
+export default wrapper_div
