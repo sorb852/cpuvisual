@@ -18,6 +18,32 @@ It's origin came from the *ENIAC*, the first computer ever created. It was made 
 i couldnt be bothered to add more history its like literally the same afterwards.
 if i do start talking about more stuff it will get super complicated like ever heard of an SIMD?
 
+# Hardware of a CPU
+
+The CPU consists of many MANY transistors and many MANY logic gates (which are just more transistors lol) AND many MANY latches (which are just more logic gates (which are just more transistors lol)). With all of the components being made from transistors, why so?
+
+## Transistors
+
+Transistors are basically a version of switches that doesn't need manual pressing to set a state. In CPUs a MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is used, which means that the transistor runs on voltage rather than current.
+
+They have 2 inputs and 1 output. Being Source, Gate and Drain. Source and Drain are obvious, however the Gate is interesting. Depending on the voltage sent through the Gate pin, it would decide whether the Source voltage would go past the Drain or not.
+For example if the Source is given input HIGH and Gate given input HIGH, it would Drain HIGH. However if the Source or Gate is given input LOW, it would Drain LOW.
+This transistor is called an N Channel or NMOS. There's another one called P Channel or PMOS which activate when there's low voltage on the Gate. Basically the reverse of a PMOS.
+
+## Logic gates
+
+You might assume logic gates are a completely different component (if i didnt spoil it god damn it) but you would be surprised to know that EVERYTHING in a CPU are just transistors. But like how?
+
+Take for example the AND or the OR, two of the simplest gates in electronics.
+
+Let A and B denote the input values. The AND gate is made by having two transistors in succession with both A and B set on each of the transistors Gate, and connecting the Drain of the first transistor to the Source of the other transistor. And with it a logic AND gate is created. For the OR gate we can have the transistors in parallel so now regardless of the output of one transistor, the other one can still decide the final output.
+
+<!-- TODO: include graphs -->
+
+## Flip flops
+
+i have no fucking clue how it works some self connecting bs and somehow has resst and set pins now
+
 # How does a CPU work?
 
 The CPU runs instructions of a program. Which it separates into two main components, being:
@@ -193,10 +219,16 @@ Look maybe, the real central processing unit was the friends we made along the w
 * [Wikipedia page for ISA](https://en.wikipedia.org/wiki/Instruction_set_architecture)
 * [Wikipedia page for x86-64](https://en.wikipedia.org/wiki/X86-64)
 * [Wikipedia page for ARM](https://en.wikipedia.org/wiki/ARM_architecture_family)
+* [Wikipedia page for Transistor](https://en.wikipedia.org/wiki/Transistor#)
+* [Wikipedia page for MOSFET](https://en.wikipedia.org/wiki/MOSFET)
+* [Wikipedia page for Logic gates](https://en.wikipedia.org/wiki/Logic_gate)
+* [Wikipedia page for Bus (Computing)](https://en.wikipedia.org/wiki/Bus_(computing))
+* [Wikipedia page for Flip flops](https://en.wikipedia.org/wiki/Flip-flop_(electronics))
 * [CPU article by freeCodeCamp](https://www.freecodecamp.org/news/how-does-a-cpu-work/)
 * [Where Does The CPU Start Executing Code?](https://www.youtube.com/watch?v=WLixwlcVm5Y)
-* i dont remember but that one redstone circuit video made by that minecraft youtuber (my first intro to whatever this is btw)
 * [Anatomy of a CPU](https://www.techspot.com/article/2000-anatomy-cpu/)
+* i dont remember but that one redstone circuit video made by that minecraft youtuber (my first intro to whatever this is btw)
+
 
 <!-- im noticing that i dont really know much about cpus -->
 <!-- dang i love finding out more of the things i like -->

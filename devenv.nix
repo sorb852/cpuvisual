@@ -4,6 +4,7 @@
   packages = [
     pkgs.eslint
     pkgs.prettier
+    pkgs.python3Packages.grip
     # pkgs.svelte-check
     # pkgs.tailwindcss
   ];
